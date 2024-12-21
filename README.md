@@ -68,7 +68,7 @@ project/
 ### Étapes
 1. Clonez le dépôt :
    ```bash
-   git clone <url-du-depot>
+   git clone [<url-du-depot>](https://github.com/Martinel-lab/project.git)
    cd project
    ```
 
