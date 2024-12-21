@@ -112,6 +112,16 @@ project/
 
 ---
 
+## Captures d'écran
+
+### Page principale
+![Page principale](screenshots/MainPage.png)
+
+### Exemple de liste
+![Exemple de liste](screenshots/List.png)
+
+---
+
 ## Configuration des variables d'environnement
 
 Créez un fichier `.env` avec les paramètres suivants :
