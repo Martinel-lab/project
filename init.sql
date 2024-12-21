@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXISTS mydatabase;
+USE mydatabase;
+
+CREATE TABLE IF NOT EXISTS discussions (
+    iddiscussion INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS messages (
+    idmessage INT AUTO_INCREMENT PRIMARY KEY,
+    iddiscussion INT NOT NULL,
+    content TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (iddiscussion) REFERENCES discussions(iddiscussion) ON DELETE CASCADE
+);
