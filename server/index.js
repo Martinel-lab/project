@@ -4,11 +4,11 @@ const mysql = require('mysql2');
 const cors = require('cors');
 
 const db = mysql.createPool({
-    host: "mysql",
-    user: "test",
-    password: "test",
-    database: "mydatabase",
-    port: 3306,
+    host: process.env.DB_HOST || "mysql",
+    user: process.env.DB_USER || "test",
+    password: process.env.DB_PASSWORD || "test",
+    database: process.env.DB_NAME || "mydatabase",
+    port: process.env.DB_PORT || 3306,
 });
 
 server.use(express.json());
